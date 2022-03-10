@@ -7,3 +7,6 @@ In order to know the limits of each code or for testing purposes the current cod
 
 ### TODO
 - Use interrupts instead of a task to check for the arrival of a new code (the task would only be activated when an interrupt gets a new code)
+- Verify code in depth:
+    - Check if no code\_char is < CONFIG\_POSITIONS\_NB
+    - Check that all even positionned code\_char are higher than the preceding one and all odd positionned code\_char are smaller than the preceding one (even & odd here are not accounting the first 0 code\_char appended to the code to simplify the algorithms)
