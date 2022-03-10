@@ -29,10 +29,10 @@ static void (*on_failure_callback) (void) = NULL;
 int potentiometer_lock_set_code(code_char *code_p, size_t code_length_p)
 {
     // Generating code
-    code_length = code_length_p+1;
-    if (code_length > MAX_CODE_LENGTH)
+    if (code_length_p > MAX_CODE_LENGTH)
         return -1;
 
+    code_length = code_length_p+1;
     code[0] = 0; // First code_char is always set
     memcpy(code+1, code_p, code_length * sizeof(code_char));
     return 0;
