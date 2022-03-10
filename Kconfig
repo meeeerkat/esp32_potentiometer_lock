@@ -1,0 +1,19 @@
+menu "Potentiometer lock"
+
+    config POTENTIOMETER_ADC_CHANNEL
+        int "Potentiometer's adc channel"
+        range 0 9
+        default 0
+
+    config POSITIONS_NB
+        int "Number of possible positions"
+        range 0 10
+        default 5
+
+    config READ_VALUE_DELTA
+        int "Delta between value read in milliseconds"
+        range 0 1000
+        default 100
+
+endmenu
+
